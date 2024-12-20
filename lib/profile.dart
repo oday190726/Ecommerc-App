@@ -11,6 +11,8 @@ import 'package:get/get.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:provider/provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+import 'package:captcha/admin_business_requests.dart';  // Add this import
+
 
 import 'followed_brand_viewpage.dart';
 import 'provider/google_sign_in.dart';
@@ -564,6 +566,48 @@ class _ProfileState extends State<Profile> {
                           ],
                         ),
                       ),
+                      // Inside the build method of Profile widget, add this StreamBuilder
+StreamBuilder<QuerySnapshot>(
+    stream: FirebaseFirestore.instance
+        .collection("users")
+        .where('email', isEqualTo: user!.email)
+        .snapshots(),
+    builder: (context, snapshot) {
+      if (!snapshot.hasData) return const SizedBox();
+      
+      final userRole = snapshot.data!.docs[0]['role'];
+      
+      // Only show the button for superAdmin
+      if (userRole == 'superAdmin') {
+        return ElevatedButton(
+          onPressed: () => Get.to(() => const AdminBusinessRequests()),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: Colors.white,
+            padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 15),
+          ),
+          child: const Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                'Business Requests',
+                style: TextStyle(
+                  color: Colors.black,
+                  fontSize: 16,
+                ),
+              ),
+              Icon(
+                Icons.arrow_forward_ios,
+                size: 18,
+                color: Color.fromARGB(255, 121, 120, 120),
+              ),
+            ],
+          ),
+        );
+      }
+      
+      return const SizedBox();
+    }
+),
                     ],
                   ),
                 ),
@@ -711,7 +755,7 @@ class _ProfileState extends State<Profile> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          String phoneUrl = "tel:+977 9861333461";
+                          String phoneUrl = "tel:+968 79369389";
                           launchUrl(Uri.parse(phoneUrl));
                         },
                         child: const Row(
@@ -781,7 +825,7 @@ class _ProfileState extends State<Profile> {
                       GestureDetector(
                         onTap: () {
                           String mailUrl =
-                              "mailto:rilon.maharjan@gmail.com?subject=Feedback to JuttaPasal&body=";
+                              "mailto:oday190726@nu.edu.om?subject=Feedback to Oday app=";
                           launchUrl(Uri.parse(mailUrl));
                         },
                         child: const Row(
@@ -819,7 +863,7 @@ class _ProfileState extends State<Profile> {
                             context: context,
                             builder: (BuildContext context) => AlertDialog(
                               title: const Text(
-                                "Jutta has developed to incorporate many superb takeout areas in Kathmandu with additional to come sooner rather than later. Our group takes pride in the way that we can furnish our new and faithful clients with extraordinary International brands that is not normal for that at some other Nepali shops you visit. Just sit back, relax and wait for your order to arrive.",
+                                "Oday is your go-to destination for exceptional takeout options in Oman, with more exciting additions on the way. We pride ourselves on bringing you a curated selection of renowned international brands, offering a unique experience unlike any other. Sit back, relax, and let Oday deliver your favorites right to your doorstep.",
                                 textAlign: TextAlign.center,
                                 style: TextStyle(
                                     fontSize: 16,
@@ -917,7 +961,7 @@ class _ProfileState extends State<Profile> {
                           GestureDetector(
                             onTap: () {
                               String url =
-                                  "https://www.facebook.com/rilonmhrzn/";
+                                  "https://www.facebook.com";
                               launchUrl(Uri.parse(url));
                             },
                             child: const FaIcon(
@@ -932,7 +976,7 @@ class _ProfileState extends State<Profile> {
                           GestureDetector(
                             onTap: () {
                               String url =
-                                  "https://www.youtube.com/channel/UC18AKFbWJ3Wg_op3pbTvR_Q";
+                                  "https://www.youtube.com";
                               launchUrl(Uri.parse(url));
                             },
                             child: const FaIcon(
@@ -946,7 +990,7 @@ class _ProfileState extends State<Profile> {
                           ),
                           GestureDetector(
                             onTap: () {
-                              String url = "https://twitter.com/Rilon_mhrzn";
+                              String url = "https://twitter.com";
                               launchUrl(Uri.parse(url));
                             },
                             child: const FaIcon(
@@ -961,7 +1005,7 @@ class _ProfileState extends State<Profile> {
                           GestureDetector(
                             onTap: () {
                               String url =
-                                  "https://www.instagram.com/rilon.maharjan/";
+                                  "https://www.instagram.com";
                               launchUrl(Uri.parse(url));
                             },
                             child: const FaIcon(
@@ -977,7 +1021,7 @@ class _ProfileState extends State<Profile> {
                       ),
                       const Center(
                         child: Text(
-                          "Developed by WeebTech",
+                          "Developed by Oday Sharqawi",
                           style: TextStyle(
                               fontSize: 13,
                               color: Color.fromARGB(255, 156, 155, 155)),

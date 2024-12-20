@@ -90,12 +90,12 @@ BEGIN
         BLOCK "040904e4"
         BEGIN
             VALUE "CompanyName", "com.example" "\0"
-            VALUE "FileDescription", "jutta_pasal" "\0"
+            VALUE "FileDescription", "Oday_App" "\0"
             VALUE "FileVersion", VERSION_AS_STRING "\0"
-            VALUE "InternalName", "jutta_pasal" "\0"
+            VALUE "InternalName", "Oday_App" "\0"
             VALUE "LegalCopyright", "Copyright (C) 2022 com.example. All rights reserved." "\0"
-            VALUE "OriginalFilename", "jutta_pasal.exe" "\0"
-            VALUE "ProductName", "jutta_pasal" "\0"
+            VALUE "OriginalFilename", "Oday_App.exe" "\0"
+            VALUE "ProductName", "Oday_App" "\0"
             VALUE "ProductVersion", VERSION_AS_STRING "\0"
         END
     END

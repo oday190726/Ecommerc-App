@@ -357,7 +357,7 @@ class _LoginState extends State<Login> {
         email: emailController.text.trim(),
         password: passwordController.text.trim(),
       );
-      Get.snackbar('Irasshaimase!', 'Logged in successfully',
+      Get.snackbar('Success!', 'Logged in successfully',
           duration: const Duration(milliseconds: 2000),
           backgroundColor: const Color.fromARGB(126, 255, 255, 255));
     } on FirebaseAuthException catch (e) {

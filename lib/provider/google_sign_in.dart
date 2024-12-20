@@ -39,7 +39,7 @@ class GoogleSignInProvider extends ChangeNotifier {
         'phoneNumber': "",
         'role': "user",
         'adminrole': "user",
-      }).then((value) => Get.snackbar('Irasshaimase!', 'Logged in successfully',
+      }).then((value) => Get.snackbar('success!', 'Logged in successfully',
           duration: const Duration(milliseconds: 2000),
           backgroundColor: const Color.fromARGB(126, 255, 255, 255)));
     } catch (e) {

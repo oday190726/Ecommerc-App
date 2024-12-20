@@ -65,15 +65,15 @@ class _FollowedStoreTileState extends State<FollowedStoreTile> {
             ElevatedButton(
               onPressed: () => unfollow(context),
               child: const Text(
-                "Unollow",
+                "Unfollow",
                 style: TextStyle(
-                    fontSize: 16, color: Color.fromARGB(255, 236, 236, 236)),
+                    fontSize: 15, color: Color.fromARGB(255, 236, 236, 236)),
               ),
               style: ElevatedButton.styleFrom(
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(5),
                   ),
-                  fixedSize: const Size(90, 30),
+                  fixedSize: const Size(100, 30),
                   textStyle: const TextStyle(
                       fontSize: 18, fontWeight: FontWeight.w700),
                   backgroundColor: const Color.fromARGB(212, 20, 20, 20),

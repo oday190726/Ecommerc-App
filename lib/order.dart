@@ -248,7 +248,7 @@ class _OrderPageState extends State<OrderPage> {
                         ),
                         RichText(
                           text: TextSpan(
-                            text: "Rs. ",
+                            text: "OMR. ",
                             style: const TextStyle(
                                 color: Colors.grey,
                                 fontSize: 15,
@@ -491,7 +491,7 @@ class _OrderPageState extends State<OrderPage> {
                             const Spacer(),
                             Row(
                               children: [
-                                const Text("Rs."),
+                                const Text("OMR."),
                                 const SizedBox(
                                   width: 5,
                                 ),
@@ -510,7 +510,7 @@ class _OrderPageState extends State<OrderPage> {
                               style: TextStyle(fontWeight: FontWeight.w400),
                             ),
                             Spacer(),
-                            Text("Rs. 100"),
+                            Text("OMR. 2"),
                           ],
                         ),
                         const SizedBox(
@@ -549,14 +549,14 @@ class _OrderPageState extends State<OrderPage> {
                             ),
                             const Spacer(),
                             const Text(
-                              "Rs.",
+                              "OMR.",
                               style: TextStyle(fontWeight: FontWeight.w600),
                             ),
                             const SizedBox(
                               width: 3,
                             ),
                             Text(
-                              "${((total) - (total) * ((discountPercent) / 100)) + 100}",
+                              "${((total) - (total) * ((discountPercent) / 100)) + 2}",
                               style: const TextStyle(
                                   fontWeight: FontWeight.w700, fontSize: 17),
                             ),
@@ -635,7 +635,7 @@ class _OrderPageState extends State<OrderPage> {
                           backgroundColor: Colors.black),
                     ),
                     const SizedBox(
-                      width: 20,
+                      width: 10,
                     ),
                     ElevatedButton(
                       onPressed: buynow,

@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.jutta_pasal">
+    package="com.example.Oday_App">
 
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
@@ -12,7 +12,7 @@
     </queries>
 
    <application
-        android:label="Jutta Pasal"
+        android:label="Oday"
         android:name="${applicationName}"
         android:icon="@mipmap/launcher_icon">
 

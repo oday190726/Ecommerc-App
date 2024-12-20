@@ -176,7 +176,7 @@ class _BrandProductsState extends State<BrandProducts> {
                                       ? 'Unfollow'
                                       : 'Follow',
                                   style: const TextStyle(
-                                      fontSize: 17,
+                                      fontSize: 15,
                                       color:
                                           Color.fromARGB(255, 236, 236, 236)),
                                 ),

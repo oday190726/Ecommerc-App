@@ -90,7 +90,7 @@ class _AdminProductsState extends State<ProductTile> {
                           widget.discount.isEmpty
                               ? RichText(
                                   text: TextSpan(
-                                      text: "Rs.",
+                                      text: "OMR.",
                                       style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w400,
@@ -106,7 +106,7 @@ class _AdminProductsState extends State<ProductTile> {
                                     ]))
                               : RichText(
                                   text: TextSpan(
-                                      text: "Rs.",
+                                      text: "OMR.",
                                       style: const TextStyle(
                                           fontSize: 14,
                                           fontWeight: FontWeight.w400,
@@ -127,7 +127,7 @@ class _AdminProductsState extends State<ProductTile> {
                           widget.discount.isEmpty
                               ? const SizedBox()
                               : Text(
-                                  "Rs." + widget.price,
+                                  "OMR." + widget.price,
                                   style: const TextStyle(
                                     fontSize: 12,
                                     color: Color.fromARGB(255, 139, 139, 139),

@@ -36,7 +36,7 @@ class _MyAppState extends State<MyApp> {
     return ChangeNotifierProvider(
       create: (context) => GoogleSignInProvider(),
       child: GetMaterialApp(
-        title: 'Jutta Pasal',
+        title: 'ODAY',
         debugShowCheckedModeBanner: false,
         navigatorKey: navigatorKey,
         theme: ThemeData(
